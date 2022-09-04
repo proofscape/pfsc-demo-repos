@@ -1,0 +1,72 @@
+# --------------------------------------------------------------------------- #
+# Proofscape Demo Repos                                                       #
+# Copyright (c) 2021-2022 Proofscape contributors                             #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+anno Notes @@@
+# Widget Types
+
+These notes aim to show you an example of every different type of widget.
+
+<label:w2>[## `label` widgets]{}
+
+Let's start with a `label` widget. As you can see...well, you
+can't actually see anything. But try hovering your mouse over the heading
+for this section. See the "paragraph" icon pop up?
+Go ahead and click, and you'll get a message telling you something has been
+copied to clipboard. Try pasting it into a text editor somewhere on your
+computer, and you should see the libpath for the (invisible)
+label widget that covers the section heading.
+
+The purpose of a `label` widget is to make it possible to link to a
+certain location in an annotation. That is all. By having a libpath,
+and by existing in a certain place, a `label` widget makes
+this possible. While section headings are perhaps the most obvious place
+to use label widgets, you can use them <label:w1>[anywhere]{}. For example,
+try clicking the word "anywhere" in the last sentence.
+
+You may be thinking, "Well if they're invisible (until mouse hover) how is
+the user supposed to know where there's a label widget?" And the answer is,
+they're not. Label widgets are meant to serve you, the annotation _author_,
+in making the links you want to make.
+
+If you decide to put label widgets on all your section headings, as is not
+a bad idea, then your users may come to understand that they can always make
+links to the various sections of your work.
+
+## `goal` widgets
+
+A goal widget lets you place an in-line goal box in your text, of the
+same kind that appears in the corner of every node in every proof chart.
+
+You might for example want to use goal widgets in a task list:
+
+* <goal:w3>[]{} Get up
+* <goal:w4>[]{} Eat breakfast
+* <goal:w5>[]{} Brush teeth
+
+Again, these are just like the goal boxes on chart nodes, meaning you can
+check and uncheck them, and you can right-click them to record notes about
+them.
+
+
+## `qna` widgets
+
+<qna:w6>[]{
+    question: "What is a `qna` widget good for?",
+    answer: "This.",
+}
+
+Sometimes in the course of a discussion you want to ask the reader a question,
+and give them a chance to answer it themselves before you reveal the answer.
+The `qna` widget supports this.
+
+By now you may have hovered your mouse over the blank "Answer" space in the
+`qna` widget above. If not, try it now.
+
+@@@
+

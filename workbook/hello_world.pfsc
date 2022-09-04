@@ -1,0 +1,67 @@
+# --------------------------------------------------------------------------- #
+# Proofscape Demo Repos                                                       #
+# Copyright (c) 2021-2022 Proofscape contributors                             #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+
+# This module encodes a theorem, its proof, an expansion, and an annotation. It
+# does this using three `deduc`s, and one `anno`.
+
+deduc Thm {
+
+    supp S {
+        en="Suppose $n$ and $m$ are amazing numbers."
+    }
+
+    asrt C {
+        en="$n + m$ is a stupendous number."
+    }
+
+    meson="
+    Suppose S. Then C.
+    "
+}
+
+deduc Pf of Thm.C {
+
+    asrt A10 {
+        en="a thing that follows from the supposition"
+    }
+
+    asrt A20 {
+        en="another thing that follows from that"
+    }
+
+    meson="
+    From Thm.S get A10. Then A20. Therefore Thm.C.
+    "
+
+}
+
+deduc X01 of Pf.A20 {
+
+    asrt B10 {
+        en="an additional thing to point out"
+    }
+
+    asrt B20 {
+        en="an intermediate conclusion"
+    }
+
+    meson="
+    B20 by Pf.A10 and B10. Hence Pf.A20.
+    "
+
+}
+
+anno Notes @@@
+Hello World! This is a simple annotation. It talks about <chart:>[a
+proof]{view: Pf}, and it points out <chart:>[a particular node]{view: Pf.A20}
+in that proof. You can right-click that node and open its expansion, or the
+annotation can <chart:>[open the expansion for you]{view: X01}.
+@@@
+
