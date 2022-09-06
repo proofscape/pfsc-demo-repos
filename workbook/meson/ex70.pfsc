@@ -1,0 +1,63 @@
+# --------------------------------------------------------------------------- #
+# Proofscape Demo Repos                                                       #
+# Copyright (c) 2021-2022 Proofscape contributors                             #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+deduc Thm {
+
+    asrt A {
+        sy = "$A$"
+    }
+
+    asrt B {
+        sy = "$B$"
+    }
+
+    supp S {
+        sy = "$S$"
+    }
+
+    asrt C {
+        sy = "$C$"
+    }
+
+    asrt D {
+        sy = "$D$"
+    }
+
+    asrt E {
+        sy = "$E$"
+    }
+
+    #--------------------------------------------------------------------------
+    # GENERAL INSTRUCTIONS:
+    #   The initial Meson script names nodes, but does not link them together.
+    #   DELETE this script, and REPLACE it with the script the exercise asks
+    #   you to write.
+    #
+    #   After writing the script, use Ctrl-B to build (or right-click the
+    #   background of the editor and select "Build").
+    #
+    # EXERCISE:
+    #
+    # Try the Meson script:
+    #
+    #   A, therefore B. But suppose S.
+    #   Then C, using D. Therefore E by B.
+    #
+    # Then try changing "But suppose S" to "Suppose S"
+    # and see that a flow arrow is created from B to S.
+    # (If you do not see it, you may need to right-click
+    # the "Thm" box, and deselect the "Suppress flow arrows" option.)
+    #
+    #--------------------------------------------------------------------------
+
+    meson="""
+    suppose S; have A; have B; have C; have D; have E
+    """
+
+}

@@ -1,0 +1,60 @@
+# --------------------------------------------------------------------------- #
+# Proofscape Demo Repos                                                       #
+# Copyright (c) 2021-2022 Proofscape contributors                             #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+deduc Thm {
+
+    asrt A {
+        sy = "$A$"
+    }
+
+    asrt B {
+        sy = "$B$"
+    }
+
+    asrt C {
+        sy = "$C$"
+    }
+
+    asrt D {
+        sy = "$D$"
+    }
+
+    asrt E {
+        sy = "$E$"
+    }
+
+    mthd M {
+        sy = "$M$"
+    }
+
+    #--------------------------------------------------------------------------
+    # GENERAL INSTRUCTIONS:
+    #   The initial Meson script names nodes, but does not link them together.
+    #   DELETE this script, and REPLACE it with the script the exercise asks
+    #   you to write.
+    #
+    #   After writing the script, use Ctrl-B to build (or right-click the
+    #   background of the editor and select "Build").
+    #
+    # EXERCISE:
+    #
+    # Try the Meson script:
+    #
+    #   A implies B. From C get D, hence E by B, applying M.
+    #
+    # Then try deleting the ", applying M" and the definiton of
+    # node M above, and see that the method node is removed.
+    #
+    #--------------------------------------------------------------------------
+
+    meson="""
+    have A; have B; have C; have D; have E; have M
+    """
+
+}
