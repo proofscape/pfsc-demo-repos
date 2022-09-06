@@ -1,0 +1,62 @@
+# --------------------------------------------------------------------------- #
+# Proofscape Demo Repos                                                       #
+# Copyright (c) 2021-2022 Proofscape contributors                             #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+deduc Thm {
+
+    supp S {
+        sy = "$S$"
+    }
+
+    asrt B {
+        sy = "$B$"
+    }
+
+    asrt C {
+        sy = "$C$"
+    }
+
+    #--------------------------------------------------------------------------
+    # GENERAL INSTRUCTIONS:
+    #   The initial Meson script names nodes, but does not link them together.
+    #   DELETE this script, and REPLACE it with the script the exercise asks
+    #   you to write.
+    #
+    #   After writing the script, use Ctrl-B to build (or right-click the
+    #   background of the editor and select "Build").
+    #
+    # EXERCISE:
+    #
+    # A modal node (a node of type supp or intr) must be
+    # introduced by a modal keyword ("let" or "suppose") the
+    # first time it is mentioned in a Meson script.
+    #
+    # For example,
+    #
+    #   Suppose S. Then B, so C.
+    #
+    # will work, but
+    #
+    #   S. then B, so C.
+    #
+    # will cause an error. (Try it!)
+    #
+    # On the other hand,
+    #
+    #   Suppose S. Then B, so C, using S.
+    #
+    # works. Notice that the second mention of S does not require
+    # a modal keyword.
+    #
+    #--------------------------------------------------------------------------
+
+    meson="""
+    suppose S; have B; have C
+    """
+
+}
