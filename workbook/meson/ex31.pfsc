@@ -1,0 +1,49 @@
+# --------------------------------------------------------------------------- #
+# Proofscape Demo Repos                                                       #
+# Copyright (c) 2021-2022 Proofscape contributors                             #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+deduc Thm {
+
+    asrt A1 {
+        sy = "$A1$"
+    }
+
+    asrt A2 {
+        sy = "$A2$"
+    }
+
+    asrt A3 {
+        sy = "$A3$"
+    }
+
+    asrt B {
+        sy = "$B$"
+    }
+
+    #--------------------------------------------------------------------------
+    # GENERAL INSTRUCTIONS:
+    #   The initial Meson script names nodes, but does not link them together.
+    #   DELETE this script, and REPLACE it with the script the exercise asks
+    #   you to write.
+    #
+    #   After writing the script, use Ctrl-B to build (or right-click the
+    #   background of the editor and select "Build").
+    #
+    # EXERCISE:
+    #
+    # Try combining several nodes Ai in order to infer node B:
+    #
+    #   A1 and A2 and A3, so B.
+    #
+    #--------------------------------------------------------------------------
+
+    meson="""
+    have A1; have A2; have A3; have B
+    """
+
+}

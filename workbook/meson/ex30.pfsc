@@ -1,0 +1,50 @@
+# --------------------------------------------------------------------------- #
+# Proofscape Demo Repos                                                       #
+# Copyright (c) 2021-2022 Proofscape contributors                             #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+deduc Thm {
+
+    asrt A {
+        sy = "$A$"
+    }
+
+    asrt B1 {
+        sy = "$B1$"
+    }
+
+    asrt B2 {
+        sy = "$B2$"
+    }
+
+    asrt B3 {
+        sy = "$B3$"
+    }
+
+    #--------------------------------------------------------------------------
+    # GENERAL INSTRUCTIONS:
+    #   The initial Meson script names nodes, but does not link them together.
+    #   DELETE this script, and REPLACE it with the script the exercise asks
+    #   you to write.
+    #
+    #   After writing the script, use Ctrl-B to build (or right-click the
+    #   background of the editor and select "Build").
+    #
+    # EXERCISE:
+    #
+    # Try naming several consequences Bi of A using the keyword "and" on the
+    # right-hand side of an inference:
+    #
+    #   A, so B1 and B2 and B3.
+    #
+    #--------------------------------------------------------------------------
+
+    meson="""
+    have A; have B1; have B2; have B3
+    """
+
+}
