@@ -1,0 +1,62 @@
+# --------------------------------------------------------------------------- #
+# Proofscape Demo Repos                                                       #
+# Copyright (c) 2021-2022 Proofscape contributors                             #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+deduc Ex {
+
+    supp S {
+        sy = "$S$"
+    }
+
+    asrt A {
+        sy = "$A$"
+    }
+
+    asrt B {
+        sy = "$B$"
+    }
+
+    asrt C {
+        sy = "$C$"
+    }
+
+    asrt D {
+        sy = "$D$"
+    }
+
+    #--------------------------------------------------------------------------
+    # GENERAL INSTRUCTIONS:
+    #   The initial Meson script names nodes, but does not link them together.
+    #   DELETE this script, and REPLACE it with the script the exercise asks
+    #   you to write.
+    #
+    #   After writing the script, use Ctrl-B to build (or right-click the
+    #   background of the editor and select "Build").
+    #
+    # EXERCISE:
+    #
+    # First build a proof with the following Meson script:
+    #
+    #   Suppose S. Then A and B. But C, so D, using A and B.
+    #
+    # Now imagine that, on closer inspection, you decided node C was not so
+    # obvious. Instead, you felt that perhaps node A or B should be used as a
+    # supporting reason for C, or perhaps even some lemma should be cited.
+    #
+    # To express this, you can add a question node as a reason for C:
+    #
+    #   Suppose S. Then A and B.
+    #   From ? get C, so D, using A and B.
+    #
+    #--------------------------------------------------------------------------
+
+    meson="""
+    suppose S; have A; have B; have C; have D
+    """
+
+}

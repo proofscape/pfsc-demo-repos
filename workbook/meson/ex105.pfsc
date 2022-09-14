@@ -1,0 +1,64 @@
+# --------------------------------------------------------------------------- #
+# Proofscape Demo Repos                                                       #
+# Copyright (c) 2021-2022 Proofscape contributors                             #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+deduc Ex {
+
+    supp S {
+        sy = "$S$"
+    }
+
+    asrt A {
+        sy = "$A$"
+    }
+
+    asrt B {
+        sy = "$B$"
+    }
+
+    asrt C {
+        sy = "$C$"
+    }
+
+    asrt D {
+        sy = "$D$"
+    }
+
+    #--------------------------------------------------------------------------
+    # GENERAL INSTRUCTIONS:
+    #   The initial Meson script names nodes, but does not link them together.
+    #   DELETE this script, and REPLACE it with the script the exercise asks
+    #   you to write.
+    #
+    #   After writing the script, use Ctrl-B to build (or right-click the
+    #   background of the editor and select "Build").
+    #
+    # EXERCISE:
+    #
+    # Suppose you were transcribing a proof from the literature, and you
+    # represented it with the following Meson script:
+    #
+    #   Suppose S. Then A and B and C. Therefore D.
+    #
+    # Now imagine that, after thinking about it, it seemed to you that D
+    # followed directly from C alone, and you didn't see why A and B were
+    # needed.
+    #
+    # You could express this by making D a conseuqence of C alone, and adding
+    # question nodes as consequences of A and B:
+    #
+    #   Suppose S. Then A and B and C. From C get D.
+    #   From A get ?1. From B get ?2.
+    #
+    #--------------------------------------------------------------------------
+
+    meson="""
+    suppose S; have A; have B; have C; have D
+    """
+
+}
