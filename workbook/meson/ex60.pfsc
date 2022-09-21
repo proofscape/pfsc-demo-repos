@@ -46,7 +46,7 @@ deduc Ex {
     #   Suppose S. Then A. Now let I. Then B, by A and C.
     #
     # If, after building, you do not see a flow arrow from A to I in the
-    # diagram, you may need to right-click the "Thm" box, and deselect
+    # diagram, you may need to right-click the box labeled "Ex", and deselect
     # the "Suppress flow arrows" option.
     #
     #--------------------------------------------------------------------------

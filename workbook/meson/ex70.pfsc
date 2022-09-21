@@ -49,10 +49,10 @@ deduc Ex {
     #   A, therefore B. But suppose S.
     #   Then C, using D. Therefore E by B.
     #
-    # Then try changing "But suppose S" to "Suppose S"
-    # and see that a flow arrow is created from B to S.
-    # (If you do not see it, you may need to right-click
-    # the "Thm" box, and deselect the "Suppress flow arrows" option.)
+    # Then try changing "But suppose S" to "Suppose S" and see that a flow
+    # arrow is created from B to S. (If you do not see it, you may need to
+    # right-click box labeled "Ex", and deselect the "Suppress flow arrows"
+    # option.)
     #
     #--------------------------------------------------------------------------
 
